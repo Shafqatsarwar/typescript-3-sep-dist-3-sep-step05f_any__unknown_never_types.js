@@ -1,2 +1,71 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+"use strict";
+//any 
+var myval;
+myval = true;
+myval = 42;
+myval = "hey";
+myval = [];
+myval = Math.random;
+myval = null;
+myval = undefined;
+myval = function () {
+    console.log("hey again!");
+};
+//unknown
+var value;
+value = true;
+value = 42;
+value = "hey";
+value = [];
+value = {};
+value = Math.random;
+value = null;
+value = undefined;
+value = function () {
+    console.log("hey again!");
+};
+var val;
+var val1 = val;
+var val2 = val;
+function error(message) {
+    throw new Error(message);
+}
+function fail() {
+    return error("some thing failed");
+}
+function infiniteLoop() {
+    while (true) { }
+}
+var myname = "zia";
+console.log(myname.length);
+var myvalue = 345;
+console.log(Math.floor(myvalue));
+var color;
+(function (color) {
+    color[color["Red"] = 0] = "Red";
+    color[color["Green"] = 1] = "Green";
+    color[color["Blue"] = 2] = "Blue";
+})(color || (color = {}));
+var c = color.Green;
+var color1;
+(function (color1) {
+    color1[color1["Red"] = 1] = "Red";
+    color1[color1["Green"] = 2] = "Green";
+    color1[color1["Blue"] = 3] = "Blue";
+})(color1 || (color1 = {}));
+var colorname = color1[2];
+console.log(colorname);
+var color2;
+(function (color2) {
+    color2[color2["Red"] = 1] = "Red";
+    color2[color2["Green"] = 2] = "Green";
+    color2[color2["Blue"] = 4] = "Blue";
+})(color2 || (color2 = {}));
+var colorindex = color2["Blue"];
+console.log(colorindex);
+var Status;
+(function (Status) {
+    Status["progree"] = "progress";
+    Status["passout"] = "passout";
+})(Status || (Status = {}));
+console.log(Status == Status.progress);
